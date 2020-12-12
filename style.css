@@ -1,0 +1,364 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 8.5em;
+    line-height: 0.9;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2 {
+    font-size: 4em;
+    line-height: 0.9;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+p {
+    padding-bottom: 0;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    background-color: lavender;
+    display: grid;
+    grid-template-rows: 70px;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas: 
+    "name links";
+}
+
+footer {
+    width: 100vw;
+    height: 8vh;
+    background-color: white;
+    margin-top: 92vh;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "trustkimberly links";
+}
+
+.trustkimberly {
+    font-size: 16px;
+    grid-area: trustkimberly;
+    padding-left: 10vw;
+    justify-content: flex-start;
+    align-self: center;
+  }
+  
+  .links-container {
+    font-size: 16px;
+    grid-area: links;
+    padding-right: 10vw;
+    justify-self: end;
+    align-self: center;
+  }
+  
+  .links:hover {
+    transition: 0.5s ease-in-out;
+    color: blue;
+  }
+
+.nav-name {
+    grid-area: name;
+    padding-left: 10vw;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+#nav-name {
+    margin-top: 0;
+}
+
+.links {
+    grid-area: links;
+    padding-right: 10vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-links {
+    padding-left: 2vw;
+}
+
+header {
+    height: 75vh;
+    padding: 0 10vw;
+    display: grid;
+    grid-template-rows: 75vh;
+    grid-template-columns: 350px 570px 1fr;
+    grid-template-areas: 
+    "portrait name about";
+}
+
+#portrait {
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    grid-area: portrait;
+    align-self: end;
+}
+
+.name {
+    margin-left: 25px;
+    grid-area: name;
+    align-self: end;
+}
+
+.about {
+    grid-area: about;
+    padding-left: 2vw;
+    align-self: end;
+    border-left: 4px blue solid;
+    font-size: 18px;
+}
+
+p.bottom {
+    padding-bottom: 18px;
+}
+
+.cv-link {
+    background-color: cornflowerblue;
+    border: cornflowerblue 2px solid;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.7s ease-in-out;
+}
+
+.cv-link:hover {
+    color: rgb(80, 117, 187);
+    background-color: aliceblue;
+}
+
+/* bouncing arrow */
+
+  @-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+  }
+
+  i {
+    display: block;
+    }
+
+  .arrow {
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 60px; /*change with size of arrow to make sit on bottom */
+  /*   background-image: url(); */
+  /*   background-size: contain; */
+  }
+  
+  .bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    animation-fill-mode: forwards;
+  }
+
+.about-container {
+    height: 50vh;
+    width: 50vw;
+    padding: 25vh 40vw 0 10vw;
+    font-size: 18px;
+}
+
+.education-container {
+    height: 45vh;
+    padding: 25vh 10vw 0;    
+    display: grid;
+    grid-template-rows: 45vh;
+    grid-template-columns: 350px 1fr;
+    grid-template-areas: 
+    "education awards";
+}
+
+.education {
+    grid-area: education;
+}
+
+.awards {
+    grid-area: awards;
+    border-left: 4px blue solid;
+    padding-left: 30px;
+}
+
+.inline {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.research-container {
+    height: 140vh;
+    padding: 25vh 10vw 10vh;    
+    display: grid;
+    grid-template-rows: 10vh 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    "title title"
+    "date1 article1"
+    "date2 article2"
+    "date3 article3"
+    "date4 article4"
+    "date5 article5"
+    "date6 article6";
+}
+
+.title {
+    grid-area: title;
+}
+
+.date1 {
+    grid-area: date1;
+}
+
+.article1 {
+    grid-area: article1;
+}
+
+.date2 {
+    grid-area: date2;
+}
+
+.article2 {
+    grid-area: article2;
+}
+
+.date3 {
+    grid-area: date3;
+}
+
+.article3 {
+    grid-area: article3;
+}
+
+.date4 {
+    grid-area: date4;
+}
+
+.article4 {
+    grid-area: article4;
+}
+
+.date5 {
+    grid-area: date5;
+}
+
+.article5 {
+    grid-area: article5;
+}
+
+.date6 {
+    grid-area: date6;
+}
+
+.article6 {
+    grid-area: article6;
+}
+
+p.date {
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.teaching-container {
+    height: 55vh;
+    padding: 25vh 10vw 20vh;    
+    display: grid;
+    grid-template-rows: 55vh;
+    grid-template-columns: 350px 1fr;
+    grid-template-areas: 
+    "teaching talks";
+}
+
+.teaching {
+    grid-area: teaching;
+}
+
+.talks {
+    grid-area: talks;
+    padding-left: 30px;
+    border-left: 4px blue solid;
+
+}
+
+.title-link {
+    text-decoration: none;
+    transition: 0.7s ease-in-out;
+    color: black;
+}
+
+.title-link:hover {
+    color: cornsilk;
+}

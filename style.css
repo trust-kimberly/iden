@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -29,15 +33,19 @@ p {
     line-height: 1.2;
 }
 
-a {
+a, a:visited {
     text-decoration: none;
+    color: inherit;
+    transition: 0.5s ease-in-out;
 }
+
+/* fixed navigation bar */
 
 nav {
     width: 100vw;
     height: 70px;
     position: fixed;
-    background-color: lavender;
+    background-color: #C7B6BF;
     display: grid;
     grid-template-rows: 70px;
     grid-template-columns: 320px 1fr;
@@ -45,52 +53,27 @@ nav {
     "name links";
 }
 
-footer {
-    width: 100vw;
-    height: 8vh;
-    background-color: white;
-    margin-top: 92vh;
-    position: fixed;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: 
-    "trustkimberly links";
-}
-
-.trustkimberly {
-    font-size: 16px;
-    grid-area: trustkimberly;
-    padding-left: 10vw;
-    justify-content: flex-start;
-    align-self: center;
-  }
-  
-  .links-container {
-    font-size: 16px;
-    grid-area: links;
-    padding-right: 10vw;
-    justify-self: end;
-    align-self: center;
-  }
-  
-  .links:hover {
-    transition: 0.5s ease-in-out;
-    color: blue;
-  }
-
 .nav-name {
     grid-area: name;
+    color: white;
     padding-left: 10vw;
     justify-content: flex-start;
     align-self: center;
 }
 
-#nav-name {
+h3#nav-name {
     margin-top: 0;
+    font-size: 28px;
+    transition: 0.5s ease-in-out;
+}
+
+#nav-name:hover {
+    color: mediumblue;
 }
 
 .links {
     grid-area: links;
+    color: white;
     padding-right: 10vw;
     display: flex;
     justify-content: flex-end;
@@ -99,7 +82,62 @@ footer {
 
 .nav-links {
     padding-left: 2vw;
+    transition: 0.5s ease-in-out;
 }
+
+.nav-links:hover {
+    color: darkslategray;
+}
+
+/* fixed footer */
+
+footer {
+    width: 100vw;
+    height: 8vh;
+    margin-top: 92vh;
+    position: fixed;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "trustkimberly links";
+}
+
+/* .background-color {
+    background-color: white;
+} */
+
+.background-color2 {
+    background-color: #005c5c;
+    color: white;
+}
+
+.trustkimberly {
+    font-size: 16px;
+    grid-area: trustkimberly;
+    padding-left: 10vw;
+    justify-content: flex-start;
+    align-self: center;
+    transition: 0.5s ease-in-out;
+}
+
+#trustkimberly-link:hover {
+    color: thistle;
+}
+  
+.links-container {
+    font-size: 16px;
+    grid-area: links;
+    padding-right: 10vw;
+    justify-self: end;
+    align-self: center;
+}
+
+a.linktree:hover {
+    color: blue;
+}
+
+/* landing section */
 
 header {
     height: 75vh;
@@ -137,26 +175,9 @@ p.bottom {
     padding-bottom: 18px;
 }
 
-.cv-link {
-    background-color: cornflowerblue;
-    border: cornflowerblue 2px solid;
-    padding: 12px 18px;
-    text-align: center;
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 16px;
-    font-weight: 500;
-    transition: 0.7s ease-in-out;
-}
-
-.cv-link:hover {
-    color: rgb(80, 117, 187);
-    background-color: aliceblue;
-}
-
 /* bouncing arrow */
 
-  @-moz-keyframes bounce {
+@-moz-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -moz-transform: translateY(0);
       transform: translateY(0);
@@ -169,8 +190,9 @@ p.bottom {
       -moz-transform: translateY(-15px);
       transform: translateY(-15px);
     }
-  }
-  @-webkit-keyframes bounce {
+}
+
+@-webkit-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -webkit-transform: translateY(0);
       transform: translateY(0);
@@ -183,8 +205,9 @@ p.bottom {
       -webkit-transform: translateY(-15px);
       transform: translateY(-15px);
     }
-  }
-  @keyframes bounce {
+}
+
+@keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
       -moz-transform: translateY(0);
       -ms-transform: translateY(0);
@@ -203,40 +226,60 @@ p.bottom {
       -webkit-transform: translateY(-15px);
       transform: translateY(-15px);
     }
-  }
+}
 
-  i {
+i {
     display: block;
-    }
+}
 
-  .arrow {
+.arrow {
     position: absolute;
     bottom: 10vh;
     left: 50%;
     margin-left: -20px;
     width: 40px;
-    height: 60px; /*change with size of arrow to make sit on bottom */
-  /*   background-image: url(); */
-  /*   background-size: contain; */
-  }
+    height: 60px;
+    color: teal;
+}
   
-  .bounce {
+.bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
     animation-fill-mode: forwards;
-  }
+}
+
+/* about section  */
 
 .about-container {
-    height: 50vh;
+    height: 36vh;
     width: 50vw;
-    padding: 25vh 40vw 0 10vw;
+    padding: 30vh 40vw 0 10vw;
     font-size: 18px;
 }
 
+.cv-link {
+    background-color: teal;
+    border: teal 2px solid;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.7s ease-in-out;
+}
+
+.cv-link:hover {
+    color: teal;
+    background-color: whitesmoke;
+}
+
+/* education and awards section  */
+
 .education-container {
     height: 45vh;
-    padding: 25vh 10vw 0;    
+    padding: 30vh 10vw 0;    
     display: grid;
     grid-template-rows: 45vh;
     grid-template-columns: 350px 1fr;
@@ -250,7 +293,7 @@ p.bottom {
 
 .awards {
     grid-area: awards;
-    border-left: 4px blue solid;
+    border-left: 4px mediumblue solid;
     padding-left: 30px;
 }
 
@@ -259,9 +302,11 @@ p.bottom {
     margin-top: 0;
 }
 
+/* research and publications section  */
+
 .research-container {
     height: 140vh;
-    padding: 25vh 10vw 10vh;    
+    padding: 30vh 10vw 10vh;    
     display: grid;
     grid-template-rows: 10vh 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 200px 1fr;
@@ -330,11 +375,15 @@ p.bottom {
 p.date {
     font-size: 20px;
     margin-top: 25px;
+    font-weight: 600;
+    color: mediumblue;
 }
+
+/* teaching and talks section  */
 
 .teaching-container {
     height: 55vh;
-    padding: 25vh 10vw 20vh;    
+    padding: 30vh 10vw 20vh;    
     display: grid;
     grid-template-rows: 55vh;
     grid-template-columns: 350px 1fr;
@@ -349,7 +398,7 @@ p.date {
 .talks {
     grid-area: talks;
     padding-left: 30px;
-    border-left: 4px blue solid;
+    border-left: 4px mediumblue solid;
 
 }
 
@@ -360,5 +409,13 @@ p.date {
 }
 
 .title-link:hover {
-    color: cornsilk;
+    color: #00b0b0;
+}
+
+/* end of site footer  */
+
+.large-footer {
+    width: 100vw;
+    height: 400px;
+    background-color: #005c5c;
 }

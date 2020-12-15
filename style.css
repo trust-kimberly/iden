@@ -64,7 +64,9 @@ nav {
 h3#nav-name {
     margin-top: 0;
     font-size: 28px;
-    transition: 0.5s ease-in-out;
+}
+
+#nav-name {
 }
 
 #nav-name:hover {
@@ -82,7 +84,6 @@ h3#nav-name {
 
 .nav-links {
     padding-left: 2vw;
-    transition: 0.5s ease-in-out;
 }
 
 .nav-links:hover {
@@ -97,15 +98,15 @@ footer {
     margin-top: 92vh;
     position: fixed;
     display: grid;
-    background-color: white;
+    background-color: transparent;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 
     "trustkimberly links";
 }
 
-/* .background-color {
+.background-color {
     background-color: white;
-} */
+}
 
 .background-color2 {
     background-color: #005c5c;
@@ -267,7 +268,7 @@ i {
     color: aliceblue;
     font-size: 18px;
     font-weight: 500;
-    transition: 0.7s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .cv-link:hover {
@@ -279,7 +280,7 @@ i {
 
 .education-container {
     height: 45vh;
-    padding: 30vh 10vw 0;    
+    padding: 34vh 10vw 0;    
     display: grid;
     grid-template-rows: 45vh;
     grid-template-columns: 350px 1fr;
@@ -404,7 +405,7 @@ p.date {
 
 .title-link {
     text-decoration: none;
-    transition: 0.7s ease-in-out;
+    transition: 0.5s ease-in-out;
     color: black;
 }
 
@@ -415,7 +416,45 @@ p.date {
 /* end of site footer  */
 
 .large-footer {
-    width: 100vw;
-    height: 400px;
+    width: 80vw;
+    height: 200px;
+    color: whitesmoke;
     background-color: #005c5c;
+    padding: 50px 10vw 80px;    
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "footer-name sitemap footer-contact";
+    transition: 0.5s ease-in-out;
+}
+
+.footer-name {
+    grid-area: footer-name;
+    color: cornsilk;
+}
+
+.sitemap {
+    grid-area: sitemap;
+}
+
+h3.top {
+    margin-top: 0.5em;
+}
+
+h4.bottom {
+    margin-bottom: 0.2em;
+}
+
+h4.margins {
+    margin-bottom: 0.2em;
+    margin-top: 0.6em;
+}
+
+.footer-contact {
+    grid-area: footer-contact;
+}
+
+.footer-link:hover {
+    color: mediumblue;
 }

@@ -493,54 +493,81 @@ h4.margins {
         width: 100vw;
         height: 50px;
         position: fixed;
+        display: block;
         background-color: #C7B6BF;
-    }
-    
-    .nav-name {
         color: white;
-        justify-content: center;
+        justify-self: center;
         align-self: center;
     }
+    
+    h3#nav-name {
+        font-size: 20px;
+        margin-top: 12px;
+    }
 
-    .nav-links {
+    .links {
         display: none;
     }
     
-    header {
-        height: 75vh;
-        padding: 70px 10vw 0;
+    footer {
+        width: 100vw;
+        height: 8vh;
+        margin-top: 92vh;
+        position: fixed;
         display: grid;
-        grid-template-rows: 350px 1fr;
+        background-color: transparent;
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: 
+        "trustkimberly links";
+    }
+    
+    .trustkimberly {
+        font-size: 12px;
+    }
+
+      
+    .links-container {
+        font-size: 12px;
+    }
+
+    header {
+        /* height: 75vh; */
+        padding: 70px 10vw 0;
+        display: block;
+        /* grid-template-rows: 350px 1fr;
         grid-template-columns: 300px 300px 1fr;
         grid-template-areas: 
         "portrait portrait portrait"
-        "name about about";
+        "name about about"; */
     }
     
     #portrait {
-        width: 250px;
-        height: 250px;
+        width: 80vw;
+        height: 70vw;
         object-fit: cover;
-        grid-area: portrait;
-        align-self: end;
+        /* grid-area: portrait; */
+        align-self: center;
     }
 
+    .name {
+        margin: 30px 0;
+    }
+
+    .arrow {
+        display: none;
+    }
 
     .about-container {
         /* height: 36vh; */
         width: 80vw;
-        padding: 30vh 10vw 30vh;
+        padding: 20vh 10vw 10vh;
         font-size: 18px;
+        display: block;
     }
 
     .education-container {
-        /* height: 45vh; */
-        padding: 30vh 10vw 30vh;    
+        padding: 20vh 10vw 0;    
         display: block;
-        /* grid-template-rows: 35vh;
-        grid-template-columns: 350px 1fr;
-        grid-template-areas: 
-        "education awards"; */
     }
 
     .education {
@@ -548,17 +575,18 @@ h4.margins {
     }
 
     .awards {
-        grid-area: awards;
-        padding: 30vh 10vw 30vh;
+        padding: 20vh 0 10vh;
+        border: none;
+        display: block;
     }
 
     .research-container {
-        /* height: 115vh; */
-        width: 100vw;
-        padding: 30vh 10vw 30vh;    
+        height: 215vh;
+        width: 80vw;
+        padding: 55vh 10vw 10vh;    
         display: grid;
         grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 80px 1fr;
+        grid-template-columns: 90px 1fr;
         grid-template-areas: 
         "title title"
         "date1 article1"
@@ -569,18 +597,33 @@ h4.margins {
         "date6 article6";
     }
 
+    p.date {
+        font-size: 16px;
+        margin-top: 18px;
+        font-weight: 400;
+        color: mediumblue;
+    }
+
     .teaching-container {
-        /* height: 55vh; */
-        padding: 30vh 10vw 30vh;    
+        height: 115vh;
+        padding: 10vh 10vw 10vh;    
         display: block;
-        /* grid-template-rows: 48vh;
-        grid-template-columns: 350px 1fr;
-        grid-template-areas: 
-        "teaching talks"; */
+
     }
 
     .talks {
-        /* grid-area: talks; */
-        padding: 30vh 10vw 30vh;
+        padding: 20vh 0 30vh;
+        border: none;
     }
+
+    .large-footer {
+        grid-template-columns: 120px 1fr 0.5fr;
+        padding: 50px 10vw 60px;
+    }
+
+    .footer-name {
+        font-size: 0.8em;
+    }
+
+    .
 }

@@ -465,14 +465,14 @@ h4.margins {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     h1 {
-        font-size: 5.5em;
+        font-size: 2.5em;
         line-height: 0.9;
         margin-block-start: 0;
         margin-block-end: 0;
     }
     
     h2 {
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 0.9;
         margin-block-start: 0;
         margin-block-end: 0;
@@ -480,7 +480,7 @@ h4.margins {
     }
     
     h3 {
-        font-size: 22px;
+        font-size: 18px;
         margin-bottom: 0;
     }
     
@@ -488,14 +488,27 @@ h4.margins {
         padding-bottom: 0;
         line-height: 1.2;
     }
+
+    nav {
+        width: 100vw;
+        height: 50px;
+        position: fixed;
+        background-color: #C7B6BF;
+    }
     
+    .nav-name {
+        color: white;
+        justify-content: center;
+        align-self: center;
+    }
+
     .nav-links {
         display: none;
     }
     
     header {
         height: 75vh;
-        padding: 0 10vw;
+        padding: 70px 10vw 0;
         display: grid;
         grid-template-rows: 350px 1fr;
         grid-template-columns: 300px 300px 1fr;
@@ -505,8 +518,8 @@ h4.margins {
     }
     
     #portrait {
-        width: 300px;
-        height: 350px;
+        width: 250px;
+        height: 250px;
         object-fit: cover;
         grid-area: portrait;
         align-self: end;
@@ -516,13 +529,13 @@ h4.margins {
     .about-container {
         /* height: 36vh; */
         width: 80vw;
-        padding: 30vh 10vw 0 10vw;
+        padding: 30vh 10vw 30vh;
         font-size: 18px;
     }
 
     .education-container {
         /* height: 45vh; */
-        padding: 30vh 10vw 0;    
+        padding: 30vh 10vw 30vh;    
         display: block;
         /* grid-template-rows: 35vh;
         grid-template-columns: 350px 1fr;
@@ -530,12 +543,22 @@ h4.margins {
         "education awards"; */
     }
 
+    .education {
+        grid-area: education;
+    }
+
+    .awards {
+        grid-area: awards;
+        padding: 30vh 10vw 30vh;
+    }
+
     .research-container {
         /* height: 115vh; */
-        padding: 30vh 10vw 10vh;    
+        width: 100vw;
+        padding: 30vh 10vw 30vh;    
         display: grid;
         grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 200px 1fr;
+        grid-template-columns: 80px 1fr;
         grid-template-areas: 
         "title title"
         "date1 article1"
@@ -546,14 +569,18 @@ h4.margins {
         "date6 article6";
     }
 
-
     .teaching-container {
-        height: 55vh;
-        padding: 30vh 10vw 20vh;    
+        /* height: 55vh; */
+        padding: 30vh 10vw 30vh;    
         display: block;
         /* grid-template-rows: 48vh;
         grid-template-columns: 350px 1fr;
         grid-template-areas: 
         "teaching talks"; */
+    }
+
+    .talks {
+        /* grid-area: talks; */
+        padding: 30vh 10vw 30vh;
     }
 }

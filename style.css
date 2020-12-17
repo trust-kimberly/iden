@@ -66,9 +66,6 @@ h3#nav-name {
     font-size: 28px;
 }
 
-#nav-name {
-}
-
 #nav-name:hover {
     color: mediumblue;
 }
@@ -558,7 +555,7 @@ h4.margins {
     }
 
     .about-container {
-        /* height: 36vh; */
+        height: 45vh;
         width: 80vw;
         padding: 20vh 10vw 10vh;
         font-size: 18px;
@@ -575,13 +572,13 @@ h4.margins {
     }
 
     .awards {
-        padding: 20vh 0 10vh;
+        padding: 15vh 0 10vh;
         border: none;
         display: block;
     }
 
     .research-container {
-        height: 215vh;
+        height: 260vh;
         width: 80vw;
         padding: 55vh 10vw 10vh;    
         display: grid;
@@ -612,7 +609,7 @@ h4.margins {
     }
 
     .talks {
-        padding: 20vh 0 30vh;
+        padding: 15vh 0 30vh;
         border: none;
     }
 
@@ -625,5 +622,4 @@ h4.margins {
         font-size: 0.8em;
     }
 
-    .
 }

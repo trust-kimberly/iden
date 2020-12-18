@@ -528,8 +528,8 @@ h4.margins {
     }
 
     header {
-        /* height: 75vh; */
-        padding: 70px 10vw 0;
+        height: 75vh;
+        padding: 13vh 10vw 8vh;
         display: block;
         /* grid-template-rows: 350px 1fr;
         grid-template-columns: 300px 300px 1fr;
@@ -555,34 +555,38 @@ h4.margins {
     }
 
     .about-container {
-        height: 45vh;
+        height: auto;
         width: 80vw;
-        padding: 20vh 10vw 10vh;
+        padding: 15vh 10vw 10vh;
         font-size: 18px;
         display: block;
     }
 
     .education-container {
-        padding: 20vh 10vw 0;    
+        height: auto;
+        padding: 0;
         display: block;
     }
 
     .education {
+        height: auto;
         grid-area: education;
+        padding: 15vh 10vw 5vh;
     }
 
     .awards {
-        padding: 15vh 0 10vh;
-        border: none;
+        height: auto;
+        padding: 15vh 10vw 5vh;
         display: block;
+        border: none;
     }
 
     .research-container {
-        height: 260vh;
+        height: auto;
         width: 80vw;
-        padding: 55vh 10vw 10vh;    
+        padding: 15vh 10vw 5vh;
         display: grid;
-        grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 55px auto auto auto auto auto auto;
         grid-template-columns: 90px 1fr;
         grid-template-areas: 
         "title title"
@@ -602,24 +606,39 @@ h4.margins {
     }
 
     .teaching-container {
-        height: 115vh;
-        padding: 10vh 10vw 10vh;    
+        height: auto;
+        padding: 0;
         display: block;
+    }
 
+    .teaching {
+        height: auto;
+        padding: 15vh 10vw 5vh;
     }
 
     .talks {
-        padding: 15vh 0 30vh;
+        height: auto;
+        padding: 15vh 10vw 20vh;
         border: none;
     }
 
     .large-footer {
-        grid-template-columns: 120px 1fr 0.5fr;
-        padding: 50px 10vw 60px;
+        grid-template-columns: 1.5fr 1fr;
+        padding: 50px 10vw 80px;
+        grid-template-areas: 
+        "sitemap footer-contact";
     }
 
     .footer-name {
-        font-size: 0.8em;
+        display: none;
+    }
+
+    .sitemap {
+        grid-area: footer-contact;
+    }
+
+    .footer-contact {
+        grid-area: sitemap;
     }
 
 }

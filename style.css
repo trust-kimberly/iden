@@ -250,7 +250,7 @@ i {
 /* about section  */
 
 .about-container {
-    height: 36vh;
+    height: auto;
     width: 50vw;
     padding: 30vh 40vw 0 10vw;
     font-size: 18px;
@@ -276,10 +276,10 @@ i {
 /* education and awards section  */
 
 .education-container {
-    height: 45vh;
+    height: auto;
     padding: 30vh 10vw 0;    
     display: grid;
-    grid-template-rows: 35vh;
+    grid-template-rows: auto;
     grid-template-columns: 350px 1fr;
     grid-template-areas: 
     "education awards";
@@ -303,10 +303,10 @@ i {
 /* research and publications section  */
 
 .research-container {
-    height: 115vh;
-    padding: 30vh 10vw 10vh;    
+    height: auto;
+    padding: 30vh 10vw 0;    
     display: grid;
-    grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px auto auto auto auto auto auto;
     grid-template-columns: 200px 1fr;
     grid-template-areas: 
     "title title"
@@ -380,10 +380,10 @@ p.date {
 /* teaching and talks section  */
 
 .teaching-container {
-    height: 55vh;
+    height: auto;
     padding: 30vh 10vw 20vh;    
     display: grid;
-    grid-template-rows: 48vh;
+    grid-template-rows: auto;
     grid-template-columns: 350px 1fr;
     grid-template-areas: 
     "teaching talks";
